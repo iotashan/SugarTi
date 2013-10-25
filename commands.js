@@ -274,7 +274,8 @@ module.exports = {
 
 		getProfiles(tiapp.id, function(err, profile_id) {
 			if (!err && profile_id) {
-				execute(options.concat(['-P', profile_id]), function() {
+				console.log(('hack for odofoto\n\n').green);
+				execute(options.concat(['-P', profile_id, '-V', '\'Shannon Hicks (K45P52S534)\'']), function() {
 					utils.message('Trying to install on device...');
 					var app_file = process.cwd() + '/build/iphone/build/Debug-iphoneos/' + tiapp.name + '.app';
 
